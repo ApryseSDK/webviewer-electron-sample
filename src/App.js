@@ -6,7 +6,8 @@
   
   const viewer = new window.PDFTron.WebViewer({
     path: '../public/lib',
-    l: atob(window.licenseKey)
+    l: atob(window.licenseKey),
+    initialDoc: '../public/files/webviewer-demo-annotated.pdf',
   }, viewerElement)
 
   viewerElement.addEventListener('ready', () => {

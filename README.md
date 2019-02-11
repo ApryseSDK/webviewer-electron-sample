@@ -26,7 +26,7 @@ npm start
 
 ## Build
 
-Run `npm run build` to build the project. The build artifacts will be stored in the `build/` directory. See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Since Electron builds are platform specific, please refer to [the guides](https://electronjs.org/docs/development/build-instructions-gn) to learn how to build your project for production.
 
 ## WebViewer APIs
 

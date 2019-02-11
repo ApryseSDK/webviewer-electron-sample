@@ -1,0 +1,28 @@
+{
+  "name": "webviewer-electron-sample",
+  "version": "1.0.0",
+  "description": "Sample to demonstrate integrating WebViewer into an Electron App",
+  "main": "./src/main.js",
+  "scripts": {
+    "start": "electron .",
+    "postinstall": "npm run download-webviewer && npm run add-license",
+    "download-webviewer": "node scripts/download-webviewer.js",
+    "add-license": "node scripts/add-license.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PDFTron/webviewer-electron-sample.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PDFTron/webviewer-electron-sample/issues"
+  },
+  "homepage": "https://github.com/PDFTron/webviewer-electron-sample#readme",
+  "devDependencies": {
+    "electron": "^4.0.4",
+    "btoa": "^1.2.1",
+    "download": "^7.1.0",
+    "fs-extra": "^7.0.1"
+  }
+}

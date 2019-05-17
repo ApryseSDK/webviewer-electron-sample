@@ -5,9 +5,9 @@
   "main": "./src/main.js",
   "scripts": {
     "start": "electron .",
-    "postinstall": "npm run download-webviewer && npm run add-license",
-    "download-webviewer": "node scripts/download-webviewer.js",
-    "add-license": "node scripts/add-license.js"
+    "postinstall": "npx @pdftron/webviewer-downloader",
+    "add-license": "npx @pdftron/webviewer-downloader --license",
+    "download-webviewer": "npx @pdftron/webviewer-downloader --webviewer"
   },
   "repository": {
     "type": "git",
@@ -23,6 +23,7 @@
     "electron": "^4.0.4",
     "btoa": "^1.2.1",
     "download": "^7.1.0",
-    "fs-extra": "^7.0.1"
+    "fs-extra": "^7.0.1",
+    "@pdftron/webviewer-downloader": "^1.0.3"
   }
 }

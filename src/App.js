@@ -3,7 +3,7 @@
 
   const viewerElement = document.getElementById('viewer');
 
-  window.WebViewer({
+  WebViewer({
     path: '../public/lib',
     initialDoc: '../public/files/webviewer-demo-annotated.pdf',
   }, viewerElement).then(instance => {

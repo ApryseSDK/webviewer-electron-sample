@@ -7,8 +7,6 @@ const copyFiles = async () => {
 
   try {
     await fs.copy(sourcePath, destPath);
-    await fs.copy(webViewerMinified, destPath);
-    awa
     console.log('WebViewer files copied over successfully');
   } catch (err) {
     console.error(err);

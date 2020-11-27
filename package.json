@@ -1,10 +1,13 @@
 {
   "name": "webviewer-electron-sample",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Sample to demonstrate integrating WebViewer into an Electron App",
-  "main": "./src/main.js",
+  "main": "src/index.js",
   "scripts": {
-    "start": "electron .",
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make",
+    "publish": "electron-forge publish",
     "postinstall": "node tools/copy-webviewer-files.js"
   },
   "repository": {
@@ -13,17 +16,48 @@
   },
   "author": "",
   "license": "ISC",
+  "config": {
+    "forge": {
+      "packagerConfig": {},
+      "makers": [
+        {
+          "name": "@electron-forge/maker-squirrel",
+          "config": {
+            "name": "pdftron_reader"
+          }
+        },
+        {
+          "name": "@electron-forge/maker-zip",
+          "platforms": [
+            "darwin"
+          ]
+        },
+        {
+          "name": "@electron-forge/maker-deb",
+          "config": {}
+        },
+        {
+          "name": "@electron-forge/maker-rpm",
+          "config": {}
+        }
+      ]
+    }
+  },
   "bugs": {
     "url": "https://github.com/PDFTron/webviewer-electron-sample/issues"
   },
   "homepage": "https://github.com/PDFTron/webviewer-electron-sample#readme",
   "devDependencies": {
-    "electron": "^4.0.4",
-    "btoa": "^1.2.1",
-    "download": "^7.1.0",
+    "@electron-forge/cli": "^6.0.0-beta.54",
+    "@electron-forge/maker-deb": "^6.0.0-beta.54",
+    "@electron-forge/maker-rpm": "^6.0.0-beta.54",
+    "@electron-forge/maker-squirrel": "^6.0.0-beta.54",
+    "@electron-forge/maker-zip": "^6.0.0-beta.54",
+    "electron": "11.0.3",
     "fs-extra": "^7.0.1"
   },
   "dependencies": {
-    "@pdftron/webviewer": "^7.0.0"
+    "@pdftron/webviewer": "^7.0.0",
+    "electron-squirrel-startup": "^1.0.0"
   }
 }

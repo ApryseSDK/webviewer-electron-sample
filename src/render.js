@@ -25,8 +25,8 @@ WebViewer(
     const file = await dialog.showOpenDialog({
       properties: ["openFile", "multiSelections"],
       filters: [
-        { name: "Documents", extentions: ["pdf", "docx", "pptx", "xlsx"] },
-        { name: "Images", extentions: ["png", "jpg"] },
+        { name: "Documents", extensions: ["pdf", "docx", "pptx", "xlsx"] },
+        { name: "Images", extensions: ["png", "jpg"] },
       ],
     });
 

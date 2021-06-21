@@ -8,6 +8,10 @@ Watch [a step-by-step video](https://www.youtube.com/watch?v=FyZ40lNE-pY) overvi
 
 This repo is specifically designed for any users interested in integrating WebViewer into an Electron project.
 
+## Demo
+
+You can explore all of the functionality in our [showcase](https://www.pdftron.com/webviewer/demo/).
+
 ## Initial setup
 
 Before you begin, make sure your development environment includes [Node.js](https://nodejs.org/en/).

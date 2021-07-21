@@ -19,7 +19,7 @@ WebViewer(
   instance.setTheme("dark");
   instance.disableElements(['downloadButton']);
 
-  const { docViewer, annotManager } = instance;
+  const { documentViewer, annotationManager } = instance.Core;
 
   openFileBtn.onclick = async () => {
     const file = await dialog.showOpenDialog({
@@ -49,8 +49,8 @@ WebViewer(
     });
 
     if (!file.canceled) {
-      const doc = docViewer.getDocument();
-      const xfdfString = await annotManager.exportAnnotations();
+      const doc = documentViewer.getDocument();
+      const xfdfString = await annotationManager.exportAnnotations();
       const data = await doc.getFileData({
         // saves the document with annotations in it
         xfdfString,

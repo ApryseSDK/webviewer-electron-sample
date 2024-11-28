@@ -48,16 +48,16 @@
   },
   "homepage": "https://github.com/PDFTron/webviewer-electron-sample#readme",
   "devDependencies": {
-    "@electron-forge/cli": "^6.0.0-beta.58",
-    "@electron-forge/maker-deb": "^6.0.0-beta.54",
-    "@electron-forge/maker-rpm": "^6.0.0-beta.54",
-    "@electron-forge/maker-squirrel": "^6.0.0-beta.54",
-    "@electron-forge/maker-zip": "^6.0.0-beta.54",
+    "@electron-forge/cli": "^7.5.0",
+    "@electron-forge/maker-deb": "^7.5.0",
+    "@electron-forge/maker-rpm": "^7.5.0",
+    "@electron-forge/maker-squirrel": "^7.5.0",
+    "@electron-forge/maker-zip": "^7.5.0",
     "electron": "11.0.3",
-    "fs-extra": "^7.0.1"
+    "fs-extra": "^11.2.0"
   },
   "dependencies": {
-    "@pdftron/webviewer": "^8.0.0",
+    "@pdftron/webviewer": "^11.0.0",
     "electron-squirrel-startup": "^1.0.0"
   }
 }

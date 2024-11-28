@@ -1,5 +1,4 @@
 const { dialog } = require("electron").remote;
-const path = require("path");
 const fs = require("fs");
 
 const viewerElement = document.getElementById("viewer");
@@ -16,8 +15,8 @@ WebViewer(
 ).then((instance) => {
   // Interact with APIs here.
   // See https://www.pdftron.com/documentation/web for more info
-  instance.setTheme("dark");
-  instance.disableElements(['downloadButton']);
+  instance.UI.setTheme('dark');
+  instance.UI.disableElements(['downloadButton']);
 
   const { documentViewer, annotationManager } = instance.Core;
 
@@ -31,7 +30,7 @@ WebViewer(
     });
 
     if (!file.canceled) {
-      instance.loadDocument(file.filePaths[0]);
+      instance.UI.loadDocument(file.filePaths[0]);
     }
   };
 
@@ -56,7 +55,7 @@ WebViewer(
         xfdfString,
       });
       const arr = new Uint8Array(data);
-      
+
       fs.writeFile(
         `${file.filePaths[0].toString()}/annotated.pdf`,
         arr,
